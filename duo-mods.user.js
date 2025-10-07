@@ -37,7 +37,9 @@ function main(){
             'Lesson Review' : {id: 'lesson_review', url: 'duolingo-lesson-review', 
                 desc: 'Adds the ability to go back and review missed problems'}, 
             'Easy Accents': {id: 'easy_accents', url: 'duo-easy-accents',
-                desc: 'Type accented characters easily in lessons, using the Alt key'}
+                desc: 'Type accented characters easily in lessons, using the Alt key'},
+            'Immersion Bookmarks': {id: 'immersion_bookmarks', url: 'duo-immersion-bookmarks',
+                desc: 'Adds the ability to bookmark lines in immersion articles'}
         },mods = {
             'Discussion Search': {id: 'discussion_search', func: discussionSearch,
                 desc: 'Expandable search box on the discussions page'}, 
@@ -57,7 +59,7 @@ function main(){
             document.head.appendChild(script);
         }
         
-        var base = ['//rawgithub.com/eagleeyez/Userscripts/master/', '.user.js'];
+        var base = ['//raw.githack.com/eagleeyez/Userscripts/master/', '.user.js'];
         $.each(scripts, function(title, val){
             var esc_name = val.id;
             if (getCookie(esc_name) !== 'false' && !$('script[name='+esc_name+']')[0]){
